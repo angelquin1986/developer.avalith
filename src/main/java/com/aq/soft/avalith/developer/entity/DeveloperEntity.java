@@ -31,7 +31,10 @@ public class DeveloperEntity extends SuperEntity {
     @Column(name = "link_github")
     private String linkGitHub;
 
-    @OneToMany(cascade = CascadeType.DETACH, mappedBy = "developer", fetch = FetchType.LAZY)
-    private List<DeveloperTechnologyEntity> developerTechnology;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "tecnologias_conocidas")
+    private String developerTechnology;
+
 
 }

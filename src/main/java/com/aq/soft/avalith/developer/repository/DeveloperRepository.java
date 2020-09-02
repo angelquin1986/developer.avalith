@@ -19,8 +19,6 @@ public interface DeveloperRepository extends JpaRepository<DeveloperEntity, Inte
      *
      * @return
      */
-    @Query("select d from DeveloperEntity d " +
-            "left  join  fetch  d.developerTechnology dt" +
-            " where  d.estado=" + ConstantesUtil.ESTADO_ACTIVO)
+    @Query("select d from DeveloperEntity d  where  d.estado=" + ConstantesUtil.ESTADO_ACTIVO)
     List<DeveloperEntity> findAll();
 }

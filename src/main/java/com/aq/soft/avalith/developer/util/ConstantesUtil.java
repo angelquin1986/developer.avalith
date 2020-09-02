@@ -2,9 +2,6 @@ package com.aq.soft.avalith.developer.util;
 
 import com.aq.soft.avalith.developer.dto.DeveloperDTO;
 import com.aq.soft.avalith.developer.entity.DeveloperEntity;
-import com.aq.soft.avalith.developer.entity.DeveloperTechnologyEntity;
-
-import java.util.ArrayList;
 
 /**
  * @author aquingaluisa
@@ -36,12 +33,8 @@ public class ConstantesUtil {
                 .nombreCompletos(developerDTO.getNombres_completos())
                 .linkGitHub(developerDTO.getLink_github()).build();
         developerEntity.setId(id);
-        //crerar los detalles
-        developerEntity.setDeveloperTechnology(new ArrayList<>());
-        for (String tecnologias : developerDTO.getTecnologias_conocidas()) {
-            DeveloperTechnologyEntity developerTechnologyEntity = DeveloperTechnologyEntity.builder().descripcion(tecnologias).build();
-            developerEntity.getDeveloperTechnology().add(developerTechnologyEntity);
-        }
+        //crear los detalles
+        developerEntity.setDeveloperTechnology(String.join(",", developerDTO.getTecnologias_conocidas()));
         return developerEntity;
     }
 }
