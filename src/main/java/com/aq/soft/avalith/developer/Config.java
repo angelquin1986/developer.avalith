@@ -13,6 +13,7 @@ import java.util.List;
 
 
 /**
+ * @author  aquingaluisa
  * Configuraciones para el proyecto web
  */
 @Configuration

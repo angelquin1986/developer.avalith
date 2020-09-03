@@ -10,4 +10,8 @@ class DeveloperApplicationTests {
 	void contextLoads() {
 	}
 
+	@Test
+	void listardevelopers() {
+
+	}
 }
