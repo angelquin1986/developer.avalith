@@ -22,14 +22,14 @@
     - CONFIG: configuracion de  JACKSON para spring 
 ### URL APP HEROKU
    - https://avalith-test.herokuapp.com/
-   -(GET) http://avalith-test.herokuapp.com/developers
-   -(POS) http://avalith-test.herokuapp.com/developers/{id}
-   -(PUT) http://avalith-test.herokuapp.com/developers/{id}
-   -(DELETE) http://avalith-test.herokuapp.com/developers/{id}
+   - (GET) http://avalith-test.herokuapp.com/developers
+   - (POS) http://avalith-test.herokuapp.com/developers/{id}
+   - (PUT) http://avalith-test.herokuapp.com/developers/{id}
+   - (DELETE) http://avalith-test.herokuapp.com/developers/{id}
 ### NOTA: 
    - para los metodos GET,POS,PUT,DELETE es necesario agregar el id en el URL
    - para los metofos POS,PUT se envia una structura Json como body
-    {
+   - {
     "nombres_completos": "A Quingaluisa",
     "link_github": "www.linkedin/aquingaluisa",
     "tecnologias_conocidas": ["java", "python", ...]
